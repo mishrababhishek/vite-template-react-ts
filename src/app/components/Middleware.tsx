@@ -1,6 +1,7 @@
-import { useNavigate } from 'react-router-dom';
-import { RouteConfig } from '../shared/types/Route.types';
 import { PropsWithChildren, useEffect, useState } from 'react';
+
+import { RouteConfig } from '@shared/types/Route.types';
+import { useNavigate } from 'react-router-dom';
 
 type Props = PropsWithChildren & {
   middlewares: RouteConfig['middleware'];

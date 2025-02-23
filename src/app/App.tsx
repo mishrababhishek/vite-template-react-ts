@@ -1,11 +1,15 @@
+import { ErrorBoundary } from 'react-error-boundary';
 import { BrowserRouter } from 'react-router-dom';
-import Router from './Router';
+
+import Router from './components/Router';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <ErrorBoundary fallbackRender={({ error }) => <div>{error.message}</div>}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </ErrorBoundary>
   );
 };
 

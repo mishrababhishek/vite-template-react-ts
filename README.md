@@ -1,22 +1,64 @@
-# React + TypeScript + Vite
+# Vite Template React TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, feature-rich template for building React applications with TypeScript and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ [Vite](https://vitejs.dev/) - Lightning fast build tool
+- ⚛️ [React 19](https://react.dev/) with TypeScript
+- 🔒 Type-safe development with TypeScript
+- 📝 ESLint for code linting
+- 💅 Prettier for code formatting
+- 🚦 React Router for navigation
+- 🛡️ React Error Boundary for error handling
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Create a new project using degit:
 
-- Configure the top-level `parserOptions` property like this:
+```sh
+npx degit username/vite-template-react-ts my-project
+cd my-project
+```
+
+2. Install dependencies:
+
+```sh
+npm install
+# or
+yarn install
+```
+
+3. Start development server:
+
+```sh
+npm run dev
+# or
+yarn dev
+```
+
+## Available Scripts
+
+- `npm run dev` / `yarn dev` - Start development server
+- `npm run build` / `yarn build` - Build for production
+- `npm run preview` / `yarn preview` - Preview production build
+- `npm run lint` / `yarn lint` - Lint code with ESLint
+- `npm run format` / `yarn format` - Format code with Prettier
+
+## ESLint Configuration
+
+The project includes a robust ESLint setup with:
+
+- TypeScript support
+- React Hooks linting
+- React Refresh rules
+- Prettier integration
+
+To enable type-aware linting, update [`eslint.config.js`](eslint.config.js):
 
 ```js
 export default tseslint.config({
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
@@ -25,26 +67,16 @@ export default tseslint.config({
 });
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Project Structure
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
 ```
+src/
+  ├── app/          # App core components
+  ├── assets/       # Static assets
+  ├── features/     # Feature modules
+  └── shared/       # Shared utilities and types
+```
+
+## License
+
+MIT

@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
-import { RouteConfig } from '../shared/types/Route.types';
+
+import { RouteConfig } from '../../shared/types/Route.types';
 
 type Props = {
   Component: RouteConfig['component'];

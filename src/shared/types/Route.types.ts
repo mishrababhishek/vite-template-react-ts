@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { MiddlewareFunction } from './Middleware.types';
 
 export type RouteConfig = {
