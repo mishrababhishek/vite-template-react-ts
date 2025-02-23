@@ -1,7 +1,7 @@
+import { featureRoute } from '@features/Feature.Route';
+import { RouteConfig } from '@shared/types/Route.types';
 import { RouteObject, useRoutes } from 'react-router-dom';
 
-import { featureRoute } from '../../features/Feature.Route';
-import { RouteConfig } from '../../shared/types/Route.types';
 import Middleware from './Middleware';
 import RouteWrapper from './RouteWrapper';
 

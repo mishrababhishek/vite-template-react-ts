@@ -9,7 +9,10 @@ export default defineConfig(() => ({
   },
   resolve: {
     alias: {
+      '@app': '/src/app',
       '@assets': '/src/assets',
+      '@features': '/src/features',
+      '@middlewares': '/src/middlewares',
       '@shared': '/src/shared',
     },
   },
